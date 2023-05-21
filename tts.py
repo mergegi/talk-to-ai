@@ -24,4 +24,4 @@ def speak(text, rate=125, volm=1):
     engine.say(text)
     engine.runAndWait()
     
-speak("hello allison, the uwu girl", 100, 0.5)
+#speak("hello", 100, 0.5)#

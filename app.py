@@ -1,4 +1,5 @@
 import speech_recognition as sr
+from tts import speak
 
 r = sr.Recognizer()
 mic = sr.Microphone()
@@ -17,14 +18,14 @@ byeWords = ("bye", "goodbye", "exit", "quit", "close", "stop")
 
 def askAI(lang="en-US"):
     while True:
-        print("say smth bestie")
+        speak("say something")
         text = listen(lang)
         if text =="":
-            print("huh")
+            speak("sorry, I didn't understand you.")
             continue
         elif text.lower() in byeWords:
             print("byee :)")
             break
-        print(text)
+        speak("You just said: " + text)
 
 askAI()
